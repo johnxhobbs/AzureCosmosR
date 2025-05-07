@@ -117,6 +117,7 @@ do_request <- function(url, key, resource_type, resource_link, headers=list(), b
     http_verb=c("GET", "DELETE", "PUT", "POST", "PATCH", "HEAD"), num_retries=10,
     ...)
 {
+  message(url)
     http_verb <- match.arg(http_verb)
     for(r in seq_len(num_retries))
     {
